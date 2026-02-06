@@ -19,6 +19,7 @@ Bienvenido a la documentación completa de seguridad de la aplicación Red Socia
 
 | Documento | Descripción | Estado |
 |-----------|-------------|--------|
+| [**Testing Scenarios**](TESTING_SCENARIOS.md) | 🧪 Documentación completa de escenarios de pruebas Jest/Vitest | ✅ Completo |
 | [**API Documentation**](API.md) | 🔌 Documentación completa de la API REST | ✅ Completo |
 | [**Database Schema**](DATABASE.md) | 🗄️ Esquema de base de datos y relaciones | ✅ Completo |
 | [**Frontend Guide**](FRONTEND.md) | 🎨 Guía de desarrollo frontend | ✅ Completo |
@@ -128,11 +129,12 @@ Bienvenido a la documentación completa de seguridad de la aplicación Red Socia
 - [📈 Análisis OWASP Completo](OWASP_ANALYSIS.md)
 - [🔍 Estudio de Vulnerabilidades](SECURITY_AUDIT.md)
 - [🛠️ Guía de Implementación](SECURITY_IMPLEMENTATION.md)
+- [🧪 Escenarios de Testing](TESTING_SCENARIOS.md)
 - [🔌 Documentación API](API.md)
 - [🗄️ Esquema de Base de Datos](DATABASE.md)
 
 ---
 
 **Última Actualización**: 6 de febrero de 2026
-**Versión**: 1.0.0
-**Estado**: Documentación Completa - Implementación Pendiente
+**Versión**: 1.0.1
+**Documentos**: 9 completos
