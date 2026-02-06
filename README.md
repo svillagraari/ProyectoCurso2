@@ -215,6 +215,7 @@ La documentación completa del proyecto está organizada en varios archivos espe
 - **[💾 Base de Datos](docs/DATABASE.md)** - Esquema de BD, relaciones, migraciones y queries
 - **[🎨 Frontend Guide](docs/FRONTEND.md)** - Componentes, estado, routing y mejores prácticas React
 - **[🚀 Guía de Despliegue](docs/DEPLOYMENT.md)** - Configuración de producción, CI/CD y monitoreo- **[🔒 Seguridad](docs/SECURITY_AUDIT.md)** - Análisis completo de vulnerabilidades y medidas de seguridad
+- **[🛡️ OWASP Top 10](docs/OWASP_ANALYSIS.md)** - Evaluación contra estándares de seguridad OWASP
 - **[🛠️ Implementación de Seguridad](docs/SECURITY_IMPLEMENTATION.md)** - Guía paso a paso para corregir vulnerabilidades
 ### 🧪 Testing
 - **Backend**: Jest con tests unitarios e integración

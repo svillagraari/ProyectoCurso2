@@ -69,7 +69,8 @@ Si eres nuevo en el proyecto, comienza aquí:
 ### Seguridad y Vulnerabilidades 🔒
 - **[🚨 Resumen Ejecutivo de Seguridad](SECURITY_SUMMARY.md)** - Estado actual y plan de acción inmediata
 - **[🔒 Estudio de Vulnerabilidades](SECURITY_AUDIT.md)** - Análisis completo de 15 vulnerabilidades identificadas
-- **[🛠️ Guía de Implementación](SECURITY_IMPLEMENTATION.md)** - Instrucciones detalladas para corregir vulnerabilidades
+- **[�️ Análisis OWASP Top 10](OWASP_ANALYSIS.md)** - Evaluación contra estándares OWASP 2021
+- **[�🛠️ Guía de Implementación](SECURITY_IMPLEMENTATION.md)** - Instrucciones detalladas para corregir vulnerabilidades
 - **[✨ Mejores Prácticas](BEST_PRACTICES.md)** - Guías de seguridad y estándares
 
 ### Autenticación y Seguridad
