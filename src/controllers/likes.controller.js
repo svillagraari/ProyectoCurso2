@@ -57,7 +57,7 @@ const addLike = async (req, res) => {
           if (err) {
             return sendErrorResponse(res, 500, "Failed to like post", err);
           }
-          return sendSuccessResponse(res, 200, "Post has been liked.", {
+          return sendSuccessResponse(res, 201, "Post has been liked.", {
             userId,
             postId,
           });

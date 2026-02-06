@@ -25,3 +25,7 @@ export async function deleteStory(storyId) {
     throw new Error(getErrorMessage(err))
   }
 }
+
+// Alias para compatibilidad con tests
+export const createStory = addStory;
+export const getStoriesFeed = getStories;

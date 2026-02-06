@@ -37,20 +37,20 @@ export default function Register() {
               {error && <div className="alert alert-danger" role="alert">{error}</div>}
               <form onSubmit={onSubmit}>
                 <div className="mb-3">
-                  <label className="form-label">Usuario</label>
-                  <input className="form-control" value={form.username} onChange={(e) => setField('username', e.target.value)} required />
+                  <label className="form-label" htmlFor="username">Usuario</label>
+                  <input id="username" className="form-control" value={form.username} onChange={(e) => setField('username', e.target.value)} required />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Nombre</label>
-                  <input className="form-control" value={form.name} onChange={(e) => setField('name', e.target.value)} required />
+                  <label className="form-label" htmlFor="name">Nombre</label>
+                  <input id="name" className="form-control" value={form.name} onChange={(e) => setField('name', e.target.value)} required />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Email</label>
-                  <input className="form-control" type="email" value={form.email} onChange={(e) => setField('email', e.target.value)} required />
+                  <label className="form-label" htmlFor="email">Email</label>
+                  <input id="email" className="form-control" type="email" value={form.email} onChange={(e) => setField('email', e.target.value)} required />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Contraseña</label>
-                  <input className="form-control" type="password" value={form.password} onChange={(e) => setField('password', e.target.value)} required />
+                  <label className="form-label" htmlFor="password">Contraseña</label>
+                  <input id="password" className="form-control" type="password" value={form.password} onChange={(e) => setField('password', e.target.value)} required />
                 </div>
                 <button className="btn btn-primary w-100" disabled={loading} type="submit">{loading ? 'Creando…' : 'Registrarse'}</button>
               </form>

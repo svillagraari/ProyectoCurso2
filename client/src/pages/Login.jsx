@@ -34,12 +34,12 @@ export default function Login() {
               {error && <div className="alert alert-danger" role="alert">{error}</div>}
               <form onSubmit={onSubmit}>
                 <div className="mb-3">
-                  <label className="form-label">Email</label>
-                  <input className="form-control" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                  <label className="form-label" htmlFor="email">Email</label>
+                  <input id="email" className="form-control" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Contraseña</label>
-                  <input className="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                  <label className="form-label" htmlFor="password">Contraseña</label>
+                  <input id="password" className="form-control" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                 </div>
                 <button className="btn btn-primary w-100" disabled={loading} type="submit">{loading ? 'Accediendo…' : 'Entrar'}</button>
               </form>

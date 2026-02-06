@@ -51,7 +51,7 @@ const createPost = async (req, res) => {
         return sendErrorResponse(res, 500, "Failed to create post", err);
       }
 
-      return sendSuccessResponse(res, 200, "Post created successfully", {
+      return sendSuccessResponse(res, 201, "Post created successfully", {
         post: {
           id: result.insertId,
           user_id,
@@ -66,20 +66,68 @@ const createPost = async (req, res) => {
   }
 };
 
+const getPost = async (req, res) => {
+  const { postId } = req.params;
+
+  try {
+    const q = "SELECT * FROM posts WHERE id = ?";
+    const values = [postId];
+
+    dbConnection.query(q, values, (err, result) => {
+      if (err) {
+        return sendErrorResponse(res, 500, "Failed to get post", err);
+      }
+
+      if (result.length === 0) {
+        return sendErrorResponse(res, 404, "Post not found");
+      }
+
+      return sendSuccessResponse(res, 200, "Post retrieved successfully", {
+        post: result[0],
+      });
+    });
+  } catch (err) {
+    return sendErrorResponse(res, 500, "Failed to get post", err);
+  }
+};
+
 const deletePost = async (req, res) => {
   const userId = req.user.id;
   const { postId } = req.params;
 
   try {
-    const q = "DELETE FROM posts WHERE id = ? AND user_id = ?";
-    const values = [postId, userId];
+    // First delete related comments and likes
+    const deleteComments = "DELETE FROM comments WHERE post_id = ?";
+    const deleteLikes = "DELETE FROM likes WHERE post_id = ?";
 
-    dbConnection.query(q, values, (err, result) => {
+    // Delete comments
+    dbConnection.query(deleteComments, [postId], (err) => {
       if (err) {
-        return sendErrorResponse(res, 500, "Failed to delete post", err);
+        return sendErrorResponse(res, 500, "Failed to delete post comments", err);
       }
 
-      return sendSuccessResponse(res, 200, "Post deleted successfully");
+      // Delete likes
+      dbConnection.query(deleteLikes, [postId], (err) => {
+        if (err) {
+          return sendErrorResponse(res, 500, "Failed to delete post likes", err);
+        }
+
+        // Now delete the post
+        const q = "DELETE FROM posts WHERE id = ? AND user_id = ?";
+        const values = [postId, userId];
+
+        dbConnection.query(q, values, (err, result) => {
+          if (err) {
+            return sendErrorResponse(res, 500, "Failed to delete post", err);
+          }
+
+          if (result.affectedRows === 0) {
+            return sendErrorResponse(res, 403, "You can only delete your own posts");
+          }
+
+          return sendSuccessResponse(res, 200, "Post deleted successfully");
+        });
+      });
     });
   } catch (err) {
     return sendErrorResponse(res, 500, "Failed to delete post", err);
@@ -88,6 +136,7 @@ const deletePost = async (req, res) => {
 
 module.exports = {
   getPosts,
+  getPost,
   createPost,
   deletePost,
 };

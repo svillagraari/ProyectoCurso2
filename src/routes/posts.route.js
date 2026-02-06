@@ -3,6 +3,7 @@ const router = require("express").Router();
 // Controllers
 const {
   getPosts,
+  getPost,
   createPost,
   deletePost,
 } = require("../controllers/posts.controller");
@@ -81,6 +82,30 @@ router.get("/", getPostsValidator, verifyAuth, getPosts);
  *         description: Failed to create post
  */
 router.post("/", createPostValidator, verifyAuth, createPost);
+
+/**
+ * @swagger
+ * /posts/{postId}:
+ *   get:
+ *     summary: Get a post
+ *     description: Retrieves a single post by ID.
+ *     tags: [Posts]
+ *     parameters:
+ *       - in: path
+ *         name: postId
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: ID of the post to retrieve
+ *     responses:
+ *       200:
+ *         description: Post retrieved successfully
+ *       404:
+ *         description: Post not found
+ *       500:
+ *         description: Failed to get post
+ */
+router.get("/:postId", verifyAuth, getPost);
 
 /**
  * @swagger

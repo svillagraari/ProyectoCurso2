@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { login, register } = require("../controllers/auth.controller");
+const { login, register, logout } = require("../controllers/auth.controller");
 const {
   loginValidator,
   registerValidator,
@@ -74,5 +74,7 @@ router.post("/login", loginValidator, login);
  *         description: Internal server error
  */
 router.post("/register", registerValidator, register);
+
+router.post("/logout", logout);
 
 module.exports = router;
