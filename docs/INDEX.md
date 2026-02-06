@@ -66,6 +66,12 @@ Si eres nuevo en el proyecto, comienza aquí:
 
 ## 🔍 Búsqueda por Tema
 
+### Seguridad y Vulnerabilidades 🔒
+- **[🚨 Resumen Ejecutivo de Seguridad](SECURITY_SUMMARY.md)** - Estado actual y plan de acción inmediata
+- **[🔒 Estudio de Vulnerabilidades](SECURITY_AUDIT.md)** - Análisis completo de 15 vulnerabilidades identificadas
+- **[🛠️ Guía de Implementación](SECURITY_IMPLEMENTATION.md)** - Instrucciones detalladas para corregir vulnerabilidades
+- **[✨ Mejores Prácticas](BEST_PRACTICES.md)** - Guías de seguridad y estándares
+
 ### Autenticación y Seguridad
 - **[🔌 API Documentation](API.md)** - Endpoints de auth
 - **[🏛️ Arquitectura del Sistema](ARCHITECTURE.md)** - Flujo de autenticación

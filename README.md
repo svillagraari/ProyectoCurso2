@@ -214,8 +214,8 @@ La documentación completa del proyecto está organizada en varios archivos espe
 - **[🔌 API Documentation](docs/API.md)** - Endpoints, parámetros, respuestas y ejemplos de uso
 - **[💾 Base de Datos](docs/DATABASE.md)** - Esquema de BD, relaciones, migraciones y queries
 - **[🎨 Frontend Guide](docs/FRONTEND.md)** - Componentes, estado, routing y mejores prácticas React
-- **[🚀 Guía de Despliegue](docs/DEPLOYMENT.md)** - Configuración de producción, CI/CD y monitoreo
-
+- **[🚀 Guía de Despliegue](docs/DEPLOYMENT.md)** - Configuración de producción, CI/CD y monitoreo- **[🔒 Seguridad](docs/SECURITY_AUDIT.md)** - Análisis completo de vulnerabilidades y medidas de seguridad
+- **[🛠️ Implementación de Seguridad](docs/SECURITY_IMPLEMENTATION.md)** - Guía paso a paso para corregir vulnerabilidades
 ### 🧪 Testing
 - **Backend**: Jest con tests unitarios e integración
 - **Frontend**: Vitest con tests de componentes y servicios
