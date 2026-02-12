@@ -8,7 +8,8 @@ Si eres nuevo en el proyecto, comienza aquí:
 
 1. **[📋 Resumen Ejecutivo](EXECUTIVE_SUMMARY.md)** - Overview completo para entender el proyecto
 2. **[README Principal](../README.md)** - Instalación y configuración básica
-3. **[🏗️ Arquitectura del Sistema](ARCHITECTURE.md)** - Diagramas y flujo general
+3. **[📚 Guía Docente: Creación Paso a Paso](GUIA_DOCENTE.md)** - Tutorial completo para construir el proyecto desde cero
+4. **[🏗️ Arquitectura del Sistema](ARCHITECTURE.md)** - Diagramas y flujo general
 
 ## 📖 Documentación por Rol
 
@@ -45,7 +46,8 @@ Si eres nuevo en el proyecto, comienza aquí:
 📚 Documentación Completa
 ├── 🎯 Inicio y Overview
 │   ├── EXECUTIVE_SUMMARY.md (Resumen Ejecutivo)
-│   └── ../README.md (README Principal)
+│   ├── ../README.md (README Principal)
+│   └── GUIA_DOCENTE.md (Guía Docente: Creación Paso a Paso)
 │
 ├── 🏗️ Arquitectura y Diseño
 │   ├── GUIDE.md (Estructura y Código)
@@ -117,9 +119,10 @@ Si eres nuevo en el proyecto, comienza aquí:
 
 ### Para Nuevos Desarrolladores
 1. Leer **[📋 Resumen Ejecutivo](EXECUTIVE_SUMMARY.md)**
-2. Seguir **[README Principal](../README.md)** para setup
-3. Estudiar **[🏛️ Arquitectura del Sistema](ARCHITECTURE.md)**
-4. Profundizar en **[📋 Guía de Estructura y Código](GUIDE.md)**
+2. Seguir **[📚 Guía Docente: Creación Paso a Paso](GUIA_DOCENTE.md)** para aprender a construir el proyecto
+3. Seguir **[README Principal](../README.md)** para setup
+4. Estudiar **[🏛️ Arquitectura del Sistema](ARCHITECTURE.md)**
+5. Profundizar en **[📋 Guía de Estructura y Código](GUIDE.md)**
 
 ### Para Desarrollo Activo
 1. Consultar **[✨ Mejores Prácticas](BEST_PRACTICES.md)** para estándares
